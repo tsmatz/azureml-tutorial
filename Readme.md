@@ -21,11 +21,6 @@ Before starting, you must provision your environment as follows :
 
 - Create Data Science Virtual Machine (DSVM) on Ubuntu (which also includes Azure ML CLI) using [Azure Portal](https://portal.azure.com/)    
   Here we use DSVM, but you can also build your own environment from scratch.
-- Login your VM. Remove azure-ml-admin-cli extension as follows. (This extension is already installed on DSVM and prevents you from running ```az login``` command.)
-
-```
-sudo -i az extension remove --name azure-ml-admin-cli
-```
 
 - Create conda virtual environment and activate.
 
@@ -57,6 +52,12 @@ jupyter nbextension enable --py --user azureml.train.widgets
 Create new "Machine Learning services workspace" using [Azure Portal](https://portal.azure.com/)    
 
 ## 3. Make Sure to Install ACI Provider in Your Azure Subscription
+
+- Remove azure-ml-admin-cli extension on VM as follows. (This extension is already installed on DSVM and prevents you from running ```az login``` command.)
+
+```
+sudo -i az extension remove --name azure-ml-admin-cli
+```
 
 - Login to Azure using CLI
 
