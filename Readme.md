@@ -79,7 +79,7 @@ az provider register -n Microsoft.ContainerInstance
 
 ## 4. Start Jupyter Notebook
 
-- Start jupyter notebook server.
+- Start jupyter notebook server in your conda environment.
 
 ```
 jupyter notebook
