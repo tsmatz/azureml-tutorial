@@ -73,7 +73,7 @@ az provider show -n Microsoft.ContainerInstance -o table
 - If ACI is not registered, run the following command.
 
 ```
-# note you need to be the subscription owner in order to execute this command successfully.
+# you need to be the subscription owner to run this command
 az provider register -n Microsoft.ContainerInstance
 ```
 
