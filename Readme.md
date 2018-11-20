@@ -17,7 +17,7 @@ You can get [MNIST](http://yann.lecun.com/exdb/mnist/) dataset (**train.tfrecord
 
 Before starting, you must provision your environment as follows :
 
-## Setup your Virtual Machine and Conda Env
+## 1. Setup your Virtual Machine and Conda Env
 
 - Create Data Science Virtual Machine (DSVM) on Ubuntu (which also includes Azure ML CLI) using [Azure Portal](https://portal.azure.com/)    
   Here we use DSVM, but you can also build your own environment from scratch.
@@ -52,11 +52,11 @@ jupyter nbextension install --py --user azureml.train.widgets
 jupyter nbextension enable --py --user azureml.train.widgets
 ```
 
-## Create AML Workspace
+## 2. Create AML Workspace
 
 Create new "Machine Learning services workspace" using [Azure Portal](https://portal.azure.com/)    
 
-## Make sure to install ACI provider
+## 3. Make sure to install ACI provider in your Azure subscription
 
 - Login to Azure using CLI
 
@@ -77,7 +77,7 @@ az provider show -n Microsoft.ContainerInstance -o table
 az provider register -n Microsoft.ContainerInstance
 ```
 
-## Use jupyter notebook
+## 4. Start jupyter notebook
 
 - Start jupyter notebook server.
 
@@ -85,14 +85,14 @@ az provider register -n Microsoft.ContainerInstance
 jupyter notebook
 ```
 
-- Copy the url for notebook in the console output.    
-  Open corresponding port or set SSH tunnel for notebook access.   
-  For instance, the following picture is the setting in "putty" terminal client.    
+- Copy url for notebook in the console output, and open corresponding port in VM or set SSH tunnel for notebook access.   
+  For instance, the following picture is the SSH tunnel setting in "putty" terminal client.    
   ![SSH Tunnel settings with putty](https://i1155.photobucket.com/albums/p551/tsmatsuz/20180216_SSH_Tunnel_zpsjfahueum.jpg)
 
 - Open your notebook url using web browser.
 
 - Create new notebook by selecting "Python 3" (which is your current environment)
+
 
 
 
