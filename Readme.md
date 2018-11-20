@@ -1,4 +1,4 @@
-# TensorFlow Step-by-Step Tutorial for Azure Machine Learning service
+# Azure Machine Learning service Hands-On all for TensorFlow
 
 This sample shows how to use Azure Machine Learning (AML) service using TensorFlow along with the entire development lifecycle (explore data, train, tune, and publish).
 
