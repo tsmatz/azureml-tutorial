@@ -85,7 +85,7 @@ az provider register -n Microsoft.ContainerInstance
 jupyter notebook
 ```
 
-- Copy url for notebook in the console output, and open corresponding port in VM or set SSH tunnel for notebook access.   
+- Copy url for notebook in the console output, and open corresponding port on VM or set SSH tunnel on your desktop to access notebook.   
   For instance, the following picture is the SSH tunnel setting in "putty" terminal client.    
   ![SSH Tunnel settings with putty](https://i1155.photobucket.com/albums/p551/tsmatsuz/20180216_SSH_Tunnel_zpsjfahueum.jpg)
 
@@ -93,10 +93,8 @@ jupyter notebook
 
 - Create new notebook by selecting "Python 3" (which is your current environment)
 
-
-
-
-
+<br />
+<br />
 Now you're ready to start !
 
 See my post "[7 Reasons to Consider Azure Machine Learning Services](https://tsmatz.wordpress.com/2018/11/20/azure-machine-learning-services/)" for details.
