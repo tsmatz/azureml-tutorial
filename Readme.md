@@ -42,7 +42,7 @@ conda install nb_conda
 # install required packages for development
 conda install -y matplotlib scikit-learn
 
-# these extensions are needed for showing AML run history widget in notebook
+# these extensions are needed for showing AML run history widget in notebook (see Exercise06)
 jupyter nbextension install --py --user azureml.train.widgets
 jupyter nbextension enable --py --user azureml.train.widgets
 ```
