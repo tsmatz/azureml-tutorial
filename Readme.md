@@ -56,7 +56,7 @@ jupyter nbextension enable --py --user azureml.train.widgets
 
 Create new "Machine Learning services workspace" using [Azure Portal](https://portal.azure.com/)    
 
-## 3. Make sure to install ACI provider in your Azure subscription
+## 3. Make Sure to Install ACI Provider in Your Azure Subscription
 
 - Login to Azure using CLI
 
@@ -77,7 +77,7 @@ az provider show -n Microsoft.ContainerInstance -o table
 az provider register -n Microsoft.ContainerInstance
 ```
 
-## 4. Start jupyter notebook
+## 4. Start Jupyter Notebook
 
 - Start jupyter notebook server.
 
@@ -92,6 +92,7 @@ jupyter notebook
 - Open your notebook url using web browser.
 
 - Create new notebook by selecting "Python 3" (which is your current environment)
+
 
 
 
