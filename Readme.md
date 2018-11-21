@@ -34,13 +34,14 @@ conda activate myenv
 ```
 # install AML SDK
 # this also installs notebook in your conda env
-pip install azureml-sdk[notebooks]
+pip install azureml-sdk[notebooks]　azureml.train.widgets
 
 # install notebook integration for conda
 conda install nb_conda
 
 # install required packages for development
-conda install -y matplotlib scikit-learn
+# (use "tensorflow-gpu" if using GPU VM)
+conda install -y matplotlib tensorflow
 
 # these extensions are needed for showing AML run history widget in notebook (see Exercise06)
 jupyter nbextension install --py --user azureml.train.widgets
