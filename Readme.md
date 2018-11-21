@@ -34,7 +34,7 @@ conda activate myenv
 ```
 # install AML SDK
 # this also installs notebook in your conda env
-pip install azureml-sdk[notebooks]　azureml.train.widgets
+pip install azureml-sdk[notebooks] azureml.train.widgets
 
 # install notebook integration for conda
 conda install nb_conda
