@@ -93,7 +93,7 @@ jupyter notebook
 
 - Open your notebook url using web browser.
 
-- Create new notebook by selecting "Python 3" (which is your current conda environment)
+- Create new notebook by selecting "Python 3" kernel (which is your current conda environment).
 
 <br />
 <br />
