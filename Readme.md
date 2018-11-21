@@ -51,7 +51,7 @@ jupyter nbextension enable --py --user azureml.train.widgets
 ## 2. Create AML Workspace
 
 Create new "Machine Learning services workspace" using [Azure Portal](https://portal.azure.com/)    
-I recommend you to specify location (region) which supports GPU instance in creation. (When you create resources without specifying location in AML Python SDK, AML location is used by default.)
+I recommend you to specify location (region) which supports GPU instance in creation. (Because AML location is used by default when you create resources without specifying location in AML Python SDK.)
 
 ## 3. Make Sure to Install ACI Provider in Your Azure Subscription
 
