@@ -86,13 +86,13 @@ az provider register -n Microsoft.ContainerInstance
 jupyter notebook
 ```
 
-- Copy url for notebook in the console output, and open corresponding port on VM or set SSH tunnel on your desktop to access notebook.   
+- Copy url for notebook in the console output, and set SSH tunnel (port forwarding) on your desktop to access notebook.   
   For instance, the following picture is the SSH tunnel setting in "putty" terminal client.    
   ![SSH Tunnel settings with putty](https://i1155.photobucket.com/albums/p551/tsmatsuz/20180216_SSH_Tunnel_zpsjfahueum.jpg)
 
 - Open your notebook url using web browser.
 
-- Create new notebook by selecting "Python 3" (which is your current environment)
+- Create new notebook by selecting "Python 3" (which is your current conda environment)
 
 <br />
 <br />
