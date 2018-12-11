@@ -22,19 +22,19 @@ Before starting, you must provision your environment as follows :
 - Create Data Science Virtual Machine (DSVM) on Ubuntu (which also includes Azure ML CLI) using [Azure Portal](https://portal.azure.com/)    
   Here we use DSVM, but you can also build your own environment from scratch.
 
-- Create conda virtual environment and activate.
+- Create conda virtual environment and activate as follows.
 
 ```
 conda create -n myenv -y Python=3.6
 conda activate myenv
 ```
 
-- Install required packages in your conda environment (You must run in your conda env.)
+- Install required packages in your conda environment (You must run in your conda env.)    
+```azureml-sdk[notebooks]``` installs notebook in your conda env and ```azureml_widgets``` extension (which is used in Exercise06) is enabled in Jupyter. (See installed extension using ```jupyter nbextension list```.)
 
 ```
 # install AML SDK
-# this also installs notebook in your conda env
-pip install azureml-sdk[notebooks] azureml.train.widgets
+pip install azureml-sdk[notebooks]
 
 # install notebook integration for conda
 conda install nb_conda
@@ -42,16 +42,12 @@ conda install nb_conda
 # install required packages for development
 # (use "tensorflow-gpu" if using GPU VM)
 conda install -y matplotlib tensorflow
-
-# these extensions are needed for showing AML run history widget in notebook (see Exercise06)
-jupyter nbextension install --py --user azureml.train.widgets
-jupyter nbextension enable --py --user azureml.train.widgets
 ```
 
 ## 2. Create AML Workspace
 
-Create new "Machine Learning services workspace" using [Azure Portal](https://portal.azure.com/)    
-I recommend you to specify location (region) which supports GPU instance in creation. (Because AML location is used by default when you create resources without specifying location in AML Python SDK.)
+Create new "Machine Learning services workspace" using [Azure Portal](https://portal.azure.com/) .    
+Please make sure that **you must specify location (region) which supports NC-seriese (K80 GPU) virtual machines in workspace creation**, because workspace location is used when you create AML compute resources (virtual machines) in AML Python SDK. (See [here](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=virtual-machines) for supported regions.)
 
 ## 3. Make Sure to Install ACI Provider in Your Azure Subscription
 
@@ -88,10 +84,10 @@ jupyter notebook
 ```
 
 - Copy url for notebook in the console output, and set SSH tunnel (port forwarding) on your desktop to access notebook.   
-  For instance, the following picture is the SSH tunnel setting in "putty" terminal client.    
+  For instance, the following picture is the SSH tunnel setting on "putty" terminal client in Windows. (You can use ```ssh -L``` option in Mac OS.)    
   ![SSH Tunnel settings with putty](https://i1155.photobucket.com/albums/p551/tsmatsuz/20180216_SSH_Tunnel_zpsjfahueum.jpg)
 
-- Open your notebook url using web browser.
+- Open your notebook url (http://localhost:8888/?token=...) using web browser in your desktop.
 
 - Create new notebook by selecting "Python 3" kernel (which is your current conda environment).
 
