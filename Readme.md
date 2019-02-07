@@ -96,3 +96,5 @@ jupyter notebook
 Now you're ready to start !
 
 See my post "[7 Reasons to Use Azure Machine Learning Services](https://tsmatz.wordpress.com/2018/11/20/azure-machine-learning-services/)" for details.
+
+*Tsuyoshi Matsuzaki @ Microsoft*
