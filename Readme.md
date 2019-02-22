@@ -17,6 +17,8 @@ You can get [MNIST](http://yann.lecun.com/exdb/mnist/) dataset (**train.tfrecord
 
 Before starting, you must provision your environment as follows :
 
+(Note : You can also run on Azure Notebook. See [here](https://github.com/Azure/MachineLearningNotebooks/blob/master/NBSETUP.md) for setting up on Azure Notebook.)
+
 ## 1. Setup your Virtual Machine and Conda Env
 
 - Create Data Science Virtual Machine (DSVM) on Ubuntu (which also includes Azure ML CLI) using [Azure Portal](https://portal.azure.com/)    
