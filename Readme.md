@@ -29,8 +29,9 @@ conda create -n myenv -y Python=3.6
 conda activate myenv
 ```
 
-- Install required packages in your conda environment (You must run in your conda env.)    
-```azureml-sdk[notebooks]``` installs notebook in your conda env and ```azureml_widgets``` extension (which is used in Exercise06) is enabled in Jupyter. (See installed extension using ```jupyter nbextension list```.)
+- Install required packages in your conda environment with required extensions. (You must run in your conda env.)    
+```azureml-sdk[notebooks]``` installs notebook in your conda env and ```azureml_widgets``` extension is enabled in Jupyter. This extension is needed in Exercise 06.    
+See "[Install the Azure Machine Learning SDK for Python](https://docs.microsoft.com/en-us/python/api/overview/azure/ml/install?view=azure-ml-py)" for other extensions. (Run ```jupyter nbextension list``` for seeing installed extensions in your environment.)
 
 ```
 # install AML SDK
@@ -49,7 +50,9 @@ conda install -y matplotlib tensorflow
 Create new "Machine Learning services workspace" using [Azure Portal](https://portal.azure.com/) .    
 Please make sure that **you must specify location (region) which supports NC-seriese (K80 GPU) virtual machines in workspace creation**, because workspace location is used when you create AML compute resources (virtual machines) in AML Python SDK. (See [here](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=virtual-machines) for supported regions.)
 
-## 3. Make Sure to Install ACI Provider in Your Azure Subscription
+## 3. [If Needed] Make Sure to Install ACI Provider in Your Azure Subscription
+
+If your subscription doesn't have ACI provider, please do the following. (AML SDK needs ACI provider.)
 
 - Remove azure-ml-admin-cli extension on VM as follows. (This extension is already installed on DSVM and prevents you from running ```az login``` command.)
 
