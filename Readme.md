@@ -80,6 +80,12 @@ az provider register -n Microsoft.ContainerInstance
 
 ## 4. Start Jupyter Notebook
 
+- Clone this repo in your environment.
+
+```
+git clone https://github.com/tsmatz/azure-ml-tensorflow-complete-sample.git
+```
+
 - Start jupyter notebook server in your conda environment.
 
 ```
