@@ -15,7 +15,7 @@ You can get [MNIST](http://yann.lecun.com/exdb/mnist/) dataset (**train.tfrecord
 
 Before starting, you must provision your environment as follows :
 
-(Note : You can also run on Azure Notebook. See [here](https://github.com/Azure/MachineLearningNotebooks/blob/master/NBSETUP.md) for setting up on Azure Notebook.)
+Note : Here we setup your own notebook environment, but you can also run AML SDK on [Azure Notebook](https://github.com/Azure/MachineLearningNotebooks/blob/master/NBSETUP.md) or [AML Hosted Notebook VM (Virtual Machine)](https://docs.microsoft.com/en-us/azure/machine-learning/service/quickstart-run-cloud-notebook).
 
 ## 1. Setup your Virtual Machine and Conda Env
 
