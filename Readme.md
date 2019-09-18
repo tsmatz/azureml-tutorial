@@ -50,23 +50,11 @@ conda install -y matplotlib tensorflow
 Create new "Machine Learning services workspace" using [Azure Portal](https://portal.azure.com/) .    
 Please make sure that **you must specify location (region) which supports NC-seriese (K80 GPU) virtual machines in workspace creation**, because workspace location is used when you create AML compute resources (virtual machines) in AML Python SDK. (See [here](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=virtual-machines) for supported regions.)
 
-## 3. [If Needed] Make Sure to Install ACI Provider in Your Azure Subscription
+## 3. [Only If Needed] Make Sure to Install ACI Provider in Your Azure Subscription
 
-If your subscription doesn't have ACI provider, please do the following. (AML SDK needs ACI provider.)
+**If your subscription doesn't have ACI provider**, please do the following. (AML SDK needs ACI provider.)
 
-- Remove azure-ml-admin-cli extension on VM as follows. (This extension is already installed on DSVM and prevents you from running ```az login``` command.)
-
-```
-sudo -i az extension remove --name azure-ml-admin-cli
-```
-
-- Login to Azure using CLI
-
-```
-az login
-```
-
-- Check to see if ACI provider is already registered
+- With Azure Cloud Shell, check to see if ACI provider is already registered in your subscription.
 
 ```
 az provider show -n Microsoft.ContainerInstance -o table
@@ -76,6 +64,15 @@ az provider show -n Microsoft.ContainerInstance -o table
 
 ```
 az provider register -n Microsoft.ContainerInstance
+```
+
+- [Optional] When you want to use Azure CLI in your local DSVM, please remove the following azure-ml-admin-cli extension on VM, and login with CLI. (This extension is already installed on DSVM and will prevent you from running ```az login``` command.)
+
+```
+# Remove azure-ml-admin-cli extension on VM as follows
+sudo -i az extension remove --name azure-ml-admin-cli
+# Login to Azure
+az login
 ```
 
 ## 4. Start Jupyter Notebook
