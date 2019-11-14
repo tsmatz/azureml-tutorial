@@ -1,6 +1,6 @@
-# Azure Machine Learning service Hands-On all for TensorFlow
+# Azure Machine Learning Hands-On all for TensorFlow
 
-This sample shows how to use Azure Machine Learning (AML) service using TensorFlow along with the entire development lifecycle (explore data, train, tune, and publish).
+This sample shows how to use Azure Machine Learning (formerly, Azure Machine Learning service) using TensorFlow along with the entire development lifecycle (explore data, train, tune, and publish).
 
 You can get [MNIST](http://yann.lecun.com/exdb/mnist/) dataset (**train.tfrecords**, **test.tfrecords**) in this example by running [here](https://raw.githubusercontent.com/tensorflow/tensorflow/master/tensorflow/examples/how_tos/reading_data/convert_to_records.py), and put these files into ```data``` folder.
 
@@ -13,9 +13,11 @@ You can get [MNIST](http://yann.lecun.com/exdb/mnist/) dataset (**train.tfrecord
 - [Exercise07 : Hyperparameter Tuning](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise07_tune_hyperparameter.ipynb)
 - [Exercise08 : Publish as a Web Service](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise08_publish_model.ipynb)
 
+> Note : In this hands-on-labs, I'm using TensorFlow 1.x, however, now Azure Machine Learning supports TensorFlow 2.0 with eager execution.
+
 Before starting, you must provision your environment as follows :
 
-Note : Here we setup our own notebook environment, but you can also run AML SDK on [Azure Notebook](https://github.com/Azure/MachineLearningNotebooks/blob/master/NBSETUP.md) or [AML Hosted Notebook VM (Virtual Machine)](https://docs.microsoft.com/en-us/azure/machine-learning/service/quickstart-run-cloud-notebook).
+> Note : Here we setup our own notebook environment, but you can also run AML SDK on [Azure Notebook](https://github.com/Azure/MachineLearningNotebooks/blob/master/NBSETUP.md) or [AML Hosted Notebook VM (Virtual Machine)](https://docs.microsoft.com/en-us/azure/machine-learning/service/tutorial-1st-experiment-sdk-setup).
 
 ## 1. Setup your Virtual Machine and Conda Env
 
@@ -45,10 +47,10 @@ conda install nb_conda
 conda install -y matplotlib tensorflow
 ```
 
-## 2. Create AML Workspace
+## 2. Create AML Resource
 
-Create new "Machine Learning services workspace" using [Azure Portal](https://portal.azure.com/) .    
-Please make sure that **you must specify location (region) which supports NC-seriese (K80 GPU) virtual machines in workspace creation**, because workspace location is used when you create AML compute resources (virtual machines) in AML Python SDK. (See [here](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=virtual-machines) for supported regions.)
+Create new "Machine Learning" resource in [Azure Portal](https://portal.azure.com/) .    
+Please make sure that **you specify location (region) which supports NC-seriese (K80 GPU) virtual machines in resource creation**, because resource location is used when you create AML compute resources (virtual machines) in AML Python SDK. (See [here](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=virtual-machines) for supported regions.)
 
 ## 3. [Only If Needed] Make Sure to Install ACI Provider in Your Azure Subscription
 
@@ -101,6 +103,6 @@ jupyter notebook
 <br />
 Now you're ready to start !
 
-See my post "[7 Reasons to Use Azure Machine Learning Services](https://tsmatz.wordpress.com/2018/11/20/azure-machine-learning-services/)" for details.
+See my post "[7 Reasons to Use Azure Machine Learning](https://tsmatz.wordpress.com/2018/11/20/azure-machine-learning-services/)" for details.
 
 *Tsuyoshi Matsuzaki @ Microsoft*
