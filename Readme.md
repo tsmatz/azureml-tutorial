@@ -8,16 +8,16 @@ You can get [MNIST](http://yann.lecun.com/exdb/mnist/) dataset (**train.tfrecord
 - [Exercise02 : Prepare Datastore](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise02_prepare_datastore.ipynb)
 - [Exercise03 : Just Train in Your Working Machine](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise03_train_simple.ipynb)
 - [Exercise04 : Train on Remote GPU Virtual Machine](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise04_train_remote.ipynb)
-- [Exercise05 : Distributed Training](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise05_train_distributed.ipynb)
+- [Exercise05 : Distributed Training with Azure ML Estimator](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise05_train_distributed.ipynb)
 - [Exercise06 : Experimentation Logs and Outputs](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise06_experimentation.ipynb)
 - [Exercise07 : Hyperparameter Tuning](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise07_tune_hyperparameter.ipynb)
 - [Exercise08 : Publish as a Web Service](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise08_publish_model.ipynb)
 
-> Note : In this hands-on-labs, I'm using TensorFlow 1.x, however, now Azure Machine Learning supports TensorFlow 2.0 with eager execution.
+> Note : In this Hands-on Labs, I'm using TensorFlow 1.x, however, now Azure Machine Learning supports TensorFlow 2.0 with eager execution.
 
 Before starting, you must provision your environment as follows :
 
-> Note : Here we setup our own notebook environment, but you can also run AML SDK on [Azure Notebook](https://github.com/Azure/MachineLearningNotebooks/blob/master/NBSETUP.md) or [AML Hosted Notebook VM (Virtual Machine)](https://docs.microsoft.com/en-us/azure/machine-learning/service/tutorial-1st-experiment-sdk-setup).
+> Note : Here we setup our own notebook environment, but you can also run AML SDK on [Azure Notebook](https://github.com/Azure/MachineLearningNotebooks/blob/master/NBSETUP.md) or [AML Hosted Notebook VM (Virtual Machine)](https://docs.microsoft.com/en-us/azure/machine-learning/service/tutorial-1st-experiment-sdk-setup). However, Execise03 couldn't run on Azure Notebook, since TensorFlow version is old (TensorFlow 1.1.0) in the Notebook kernel.
 
 ## 1. Setup your Virtual Machine and Conda Env
 
@@ -44,40 +44,15 @@ conda install nb_conda
 
 # install required packages for development
 # (use "tensorflow-gpu" if using GPU VM)
-conda install -y matplotlib tensorflow
+conda install -y matplotlib tensorflow==1.14.0
 ```
 
-## 2. Create AML Resource
+## 2. Create Azure ML Resource
 
 Create new "Machine Learning" resource in [Azure Portal](https://portal.azure.com/) .    
-Please make sure that **you specify location (region) which supports NC-seriese (K80 GPU) virtual machines in resource creation**, because resource location is used when you create AML compute resources (virtual machines) in AML Python SDK. (See [here](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=virtual-machines) for supported regions.)
+Please make sure that **you specify location (region) which supports NC-seriese (K80 GPU) virtual machines in resource creation**, because this resource location is used for VM location when you create AML compute resources (virtual machines) in AML Python SDK. (See [here](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=virtual-machines) for supported regions.)
 
-## 3. [Only If Needed] Make Sure to Install ACI Provider in Your Azure Subscription
-
-**If your subscription doesn't have ACI provider**, please do the following. (AML SDK needs ACI provider.)
-
-- With Azure Cloud Shell, check to see if ACI provider is already registered in your subscription.
-
-```
-az provider show -n Microsoft.ContainerInstance -o table
-```
-
-- If ACI is not registered, run the following command. (You should be the subscription owner to run this command.)
-
-```
-az provider register -n Microsoft.ContainerInstance
-```
-
-- [Optional] When you want to use Azure CLI in your local DSVM, please remove the following azure-ml-admin-cli extension on VM, and login with CLI. (This extension is already installed on DSVM and will prevent you from running ```az login``` command.)
-
-```
-# Remove azure-ml-admin-cli extension on VM as follows
-sudo -i az extension remove --name azure-ml-admin-cli
-# Login to Azure
-az login
-```
-
-## 4. Start Jupyter Notebook
+## 3. Start Jupyter Notebook
 
 - Clone this repo in your environment.
 
