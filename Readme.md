@@ -68,7 +68,7 @@ jupyter notebook
 
 - Copy url for notebook in the console output, and set SSH tunnel (port forwarding) on your desktop to access notebook.   
   For instance, the following picture is the SSH tunnel setting on "putty" terminal client in Windows. (You can use ```ssh -L``` option in Mac OS.)    
-  ![SSH Tunnel settings with putty](https://i1155.photobucket.com/albums/p551/tsmatsuz/20180216_SSH_Tunnel_zpsjfahueum.jpg)
+  ![SSH Tunnel settings with putty](https://tsmatz.github.io/images/github/azure-ml-tensorflow-complete-sample/20191225_SSH_Tunnel.jpg)
 
 - Open your notebook url (http://localhost:8888/?token=...) using web browser in your desktop.
 
