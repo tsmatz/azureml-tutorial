@@ -21,8 +21,8 @@ Before starting, you must provision your environment as follows :
 
 ## 1. Setup your Virtual Machine and Conda Env
 
-- Create Data Science Virtual Machine (DSVM) on Ubuntu (which also includes Azure ML CLI) using [Azure Portal](https://portal.azure.com/)    
-  Here we use DSVM, but you can also build your own environment from scratch.
+- Create "[Data Science Virtual Machine (DSVM) on Ubuntu](https://azuremarketplace.microsoft.com/en-en/marketplace/apps/microsoft-dsvm.linux-data-science-vm-ubuntu)" using [Azure Portal](https://portal.azure.com/)    
+  Here we use DSVM, in which Python and Conda has already installed, but you can also build your own environment from scratch. (DSVM also includes Azure ML CLI.)
 
 - Create conda virtual environment and activate as follows.
 
