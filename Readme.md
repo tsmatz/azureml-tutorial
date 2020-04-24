@@ -1,4 +1,4 @@
-# Azure Machine Learning Hands-On all for TensorFlow
+# Azure Machine Learning Hands-On all for TensorFlow 1.x
 
 This sample shows how to use Azure Machine Learning (formerly, Azure Machine Learning service) using TensorFlow along with the entire development lifecycle (explore data, train, tune, and publish).
 
@@ -44,7 +44,7 @@ conda install nb_conda
 
 # install required packages for development
 # (use "tensorflow-gpu" if using GPU VM)
-conda install -y matplotlib tensorflow==1.14.0
+conda install -y matplotlib tensorflow==1.15
 ```
 
 ## 2. Create Azure ML Resource
