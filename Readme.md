@@ -8,12 +8,12 @@ You can get [MNIST](http://yann.lecun.com/exdb/mnist/) dataset (**train.tfrecord
 - [Exercise02 : Prepare Datastore](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise02_prepare_datastore.ipynb)
 - [Exercise03 : Just Train in Your Working Machine](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise03_train_simple.ipynb)
 - [Exercise04 : Train on Remote GPU Virtual Machine](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise04_train_remote.ipynb)
-- [Exercise05 : Distributed Training with Azure ML Estimator](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise05_train_distributed.ipynb)
+- [Exercise05 : Distributed Training](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise05_train_distributed.ipynb)
 - [Exercise06 : Experimentation Logs and Outputs](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise06_experimentation.ipynb)
 - [Exercise07 : Hyperparameter Tuning](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise07_tune_hyperparameter.ipynb)
 - [Exercise08 : Publish as a Web Service](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise08_publish_model.ipynb)
 
-> Note : Here we manually configure TensorFlow 1.x in this Hands-on, however, Azure Machine Learning supports TensorFlow version 2 with eager execution. You can also use built-in TensorFlow estimator in Azure Machine Learning.
+> Note : Here we manually configure TensorFlow 1.x in this Hands-on, however, Azure Machine Learning supports TensorFlow version 2 with eager execution. You can also use built-in curated environments in Azure Machine Learning.
 
 Before starting, you must provision your environment as follows :
 
