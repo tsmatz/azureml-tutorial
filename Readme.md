@@ -95,6 +95,6 @@ jupyter notebook
 <br />
 Now you're ready to start !
 
-See my post "[Things you can do in Azure Machine Learning](https://tsmatz.wordpress.com/2018/11/20/azure-machine-learning-services/)" for key features about Azure Machine Learning.
+See my post "[Azure Machine Learning Key Features for AI Engineers](https://tsmatz.wordpress.com/2018/11/20/azure-machine-learning-services/)" for key features about Azure Machine Learning.
 
 *Tsuyoshi Matsuzaki @ Microsoft*
