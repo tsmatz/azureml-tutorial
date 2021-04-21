@@ -1,6 +1,6 @@
 # Azure Machine Learning Hands-On all for TensorFlow 1.x
 
-This sample shows how to use Azure Machine Learning (formerly, Azure Machine Learning service) using TensorFlow along with the entire development lifecycle (explore data, train, tune, and publish).
+This sample shows generic flows of Azure Machine Learning (formerly, Azure Machine Learning service) using TensorFlow version 1.x along with the entire development lifecycle (exploration, train, tune, and publishing).
 
 You can get [MNIST](http://yann.lecun.com/exdb/mnist/) dataset (**train.tfrecords**, **test.tfrecords**) in this example by running [here](https://raw.githubusercontent.com/tensorflow/tensorflow/master/tensorflow/examples/how_tos/reading_data/convert_to_records.py), and put these files into ```data``` folder.
 
@@ -13,36 +13,52 @@ You can get [MNIST](http://yann.lecun.com/exdb/mnist/) dataset (**train.tfrecord
 - [Exercise07 : Hyperparameter Tuning](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise07_tune_hyperparameter.ipynb)
 - [Exercise08 : Publish as a Web Service](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise08_publish_model.ipynb)
 
-> Note : In this Hands-on Labs, I'm using TensorFlow 1.x, however, now Azure Machine Learning supports TensorFlow 2.0 with eager execution.
+> Note : Here we manually configure TensorFlow 1.x in this Hands-on, however, Azure Machine Learning supports TensorFlow version 2 with eager execution. You can also use built-in TensorFlow estimator in Azure Machine Learning.
 
 Before starting, you must provision your environment as follows :
 
-> Note : Here we setup our own notebook environment, but you can also run AML SDK on [Azure Notebook](https://github.com/Azure/MachineLearningNotebooks/blob/master/NBSETUP.md) or [AML Hosted Notebook VM (Virtual Machine)](https://docs.microsoft.com/en-us/azure/machine-learning/service/tutorial-1st-experiment-sdk-setup). However, Execise03 couldn't run on Azure Notebook, since TensorFlow version is old (TensorFlow 1.1.0) in the Notebook kernel.
+## 1. Setup your Virtual Machine
 
-## 1. Setup your Virtual Machine and Conda Env
+Azure Machine Learning provides its own notebook environment in AML studio UI.<br>
+However, you can setup you own environment with Azure Machine Learning SDK in Ubuntu, Mac OS, etc.
 
-- Create "[Data Science Virtual Machine (DSVM) on Ubuntu](https://azuremarketplace.microsoft.com/en-en/marketplace/apps/microsoft-dsvm.linux-data-science-vm-ubuntu)" using [Azure Portal](https://portal.azure.com/)    
-  Here we use DSVM, in which Python and Conda has already installed, but you can also build your own environment from scratch. (DSVM also includes Azure ML CLI.)
+In this tutorial, we'll setup our environment with Anaconda in Ubuntu virtual machine on Azure.
 
-- Create conda virtual environment and activate as follows.
+- Create "Data Science Virtual Machine (DSVM) on Ubuntu" resource in [Azure Portal](https://portal.azure.com/).<br>
+  In DSVM, Conda (Anaconda) has already installed and configured, but you can also build your own environment from scratch. (DSVM also includes Azure ML CLI.)
+
+- Create conda virtual environment and activate (enter into) this environment as follows. (Here I named "myenv" as follows.)
 
 ```
 conda create -n myenv -y Python=3.6
 conda activate myenv
 ```
 
-- Install required packages in your conda environment with required extensions. (You must run in your conda env.)    
-```azureml-sdk[notebooks]``` installs notebook in your conda env and ```azureml_widgets``` extension is enabled in Jupyter. This extension is needed in Exercise 06.    
-See "[Install the Azure Machine Learning SDK for Python](https://docs.microsoft.com/en-us/python/api/overview/azure/ml/install?view=azure-ml-py)" for other extensions. (Run ```jupyter nbextension list``` for seeing installed extensions in your environment.)
+- Install Jupyter notebook in your current conda environment (```myenv```).
 
 ```
-# install AML SDK
-pip install azureml-sdk[notebooks]
+# Install jupyter notebook
+pip install notebook
 
-# install notebook integration for conda
+# Install notebook integration for conda
 conda install nb_conda
+```
 
-# install required packages for development
+- Install required Python packages in your conda environment as follows.<br>
+Azure Machine Learning (AML) provides several extension packages as well as core package (```azureml-core```). For instance, if you want to run Automated machine learning in AML, you should install additional automl extension package (```azureml-train-automl```) as well.<br>
+Here we use AML interactive widget's extension (```azureml_widgets```), which is installed as Jupyter notebook extension and used in Exercise 06, and AML train core extension used in Exercise 07. (Run ```jupyter nbextension list``` for seeing installed Jupyter extensions.)
+
+```
+# Install AML SDK Core
+pip install azureml-core
+
+# Install AML interactive widgets extension
+pip install azureml-widgets
+
+# Install AML train packages including HyperDrive package
+pip install azureml-train
+
+# Install required packages for this tutorial
 # (use "tensorflow-gpu" if using GPU VM)
 conda install -y matplotlib tensorflow==1.15
 ```
@@ -50,7 +66,8 @@ conda install -y matplotlib tensorflow==1.15
 ## 2. Create Azure ML Resource
 
 Create new "Machine Learning" resource in [Azure Portal](https://portal.azure.com/) .    
-Please make sure that **you specify location (region) which supports NC-seriese (K80 GPU) virtual machines in resource creation**, because this resource location is used for VM location when you create AML compute resources (virtual machines) in AML Python SDK. (See [here](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=virtual-machines) for supported regions.)
+Please make sure that **you should specify location (region) which supports NC-seriese (K80 GPU) virtual machines in resource creation**, since we use NC6 virtual machine in this tutorial. (The resource location in AML is used for VM location when you create AML compute instances.)<br>
+See [here](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=virtual-machines) for NC-seriese supported regions.
 
 ## 3. Start Jupyter Notebook
 
@@ -60,24 +77,24 @@ Please make sure that **you specify location (region) which supports NC-seriese 
 git clone https://github.com/tsmatz/azure-ml-tensorflow-complete-sample.git
 ```
 
-- Start jupyter notebook server in your conda environment.
+- Start Jupyter in your conda environment. This will show the access url, such as ```http://localhost:8888/tree?token=xxxxxxxxxx```.
 
 ```
 jupyter notebook
 ```
 
-- Copy url for notebook in the console output, and set SSH tunnel (port forwarding) on your desktop to access notebook.   
-  For instance, the following picture is the SSH tunnel setting on "putty" terminal client in Windows. (You can use ```ssh -L``` option in Mac OS.)    
+- Set SSH tunnel (port forwarding) on your desktop to access notebook URL.<br>
+  For instance, the following picture is the SSH tunnel setting on "PuTTY" terminal client in Windows. (You can use ```ssh -L``` option in Mac OS.)    
   ![SSH Tunnel settings with putty](https://tsmatz.github.io/images/github/azure-ml-tensorflow-complete-sample/20191225_SSH_Tunnel.jpg)
 
-- Open your notebook url (http://localhost:8888/?token=...) using web browser in your desktop.
+- Copy URL (```http://localhost:8888/?token=...```) for notebook in the console output and open with web browser in your desktop.
 
-- Create new notebook by selecting "Python 3" kernel (which is your current conda environment).
+- Create a new ipy notebook by selecting your current conda environment.
 
 <br />
 <br />
 Now you're ready to start !
 
-See my post "[7 Reasons to Use Azure Machine Learning](https://tsmatz.wordpress.com/2018/11/20/azure-machine-learning-services/)" for details.
+See my post "[Things you can do in Azure Machine Learning](https://tsmatz.wordpress.com/2018/11/20/azure-machine-learning-services/)" for key features about Azure Machine Learning.
 
 *Tsuyoshi Matsuzaki @ Microsoft*
