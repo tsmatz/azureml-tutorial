@@ -55,7 +55,7 @@ pip install azureml-core
 # Install AML interactive widgets extension
 pip install azureml-widgets
 
-# Install AML train packages including HyperDrive package
+# Install AML train extension (including HyperDrive package)
 pip install azureml-train
 
 # Install required packages for this tutorial
