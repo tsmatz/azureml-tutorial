@@ -58,6 +58,9 @@ pip install azureml-widgets
 # Install AML train extension (including HyperDrive package)
 pip install azureml-train
 
+# Install AML dataset extension
+pip install azureml-dataset-runtime
+
 # Install required packages for this tutorial
 # (use "tensorflow-gpu" if using GPU VM)
 conda install -y matplotlib tensorflow==1.15
