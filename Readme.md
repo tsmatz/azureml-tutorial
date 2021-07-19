@@ -4,14 +4,14 @@ This sample shows generic flows of Azure Machine Learning (formerly, Azure Machi
 
 You can get [MNIST](http://yann.lecun.com/exdb/mnist/) dataset (**train.tfrecords**, **test.tfrecords**) in this example by running [here](https://raw.githubusercontent.com/tensorflow/tensorflow/master/tensorflow/examples/how_tos/reading_data/convert_to_records.py), and put these files into ```data``` folder.
 
-- [Exercise01 : Prepare Config Settings](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise01_prepare_config.ipynb)
-- [Exercise02 : Prepare Datastore](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise02_prepare_datastore.ipynb)
-- [Exercise03 : Just Train in Your Working Machine](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise03_train_simple.ipynb)
-- [Exercise04 : Train on Remote GPU Virtual Machine](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise04_train_remote.ipynb)
-- [Exercise05 : Distributed Training](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise05_train_distributed.ipynb)
-- [Exercise06 : Experimentation Logs and Outputs](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise06_experimentation.ipynb)
-- [Exercise07 : Hyperparameter Tuning](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise07_tune_hyperparameter.ipynb)
-- [Exercise08 : Publish as a Web Service](https://github.com/tsmatz/azure-ml-tensorflow-complete-sample/blob/master/notebooks/exercise08_publish_model.ipynb)
+- [Exercise01 : Prepare Config Settings](https://github.com/tsmatz/azureml-tutorial-tensorflow-v1/blob/master/notebooks/exercise01_prepare_config.ipynb)
+- [Exercise02 : Prepare Datastore](https://github.com/tsmatz/azureml-tutorial-tensorflow-v1/blob/master/notebooks/exercise02_prepare_datastore.ipynb)
+- [Exercise03 : Just Train in Your Working Machine](https://github.com/tsmatz/azureml-tutorial-tensorflow-v1/blob/master/notebooks/exercise03_train_simple.ipynb)
+- [Exercise04 : Train on Remote GPU Virtual Machine](https://github.com/tsmatz/azureml-tutorial-tensorflow-v1/blob/master/notebooks/exercise04_train_remote.ipynb)
+- [Exercise05 : Distributed Training](https://github.com/tsmatz/azureml-tutorial-tensorflow-v1/blob/master/notebooks/exercise05_train_distributed.ipynb)
+- [Exercise06 : Experimentation Logs and Outputs](https://github.com/tsmatz/azureml-tutorial-tensorflow-v1/blob/master/notebooks/exercise06_experimentation.ipynb)
+- [Exercise07 : Hyperparameter Tuning](https://github.com/tsmatz/azureml-tutorial-tensorflow-v1/blob/master/notebooks/exercise07_tune_hyperparameter.ipynb)
+- [Exercise08 : Publish as a Web Service](https://github.com/tsmatz/azureml-tutorial-tensorflow-v1/blob/master/notebooks/exercise08_publish_model.ipynb)
 
 > Note : Here we manually configure TensorFlow 1.x in this Hands-on, however, Azure Machine Learning supports TensorFlow version 2 with eager execution. You can also use built-in curated environments in Azure Machine Learning.
 
@@ -77,7 +77,7 @@ See [here](https://azure.microsoft.com/en-us/global-infrastructure/services/?pro
 - Clone this repo in your environment.
 
 ```
-git clone https://github.com/tsmatz/azure-ml-tensorflow-complete-sample.git
+git clone https://github.com/tsmatz/azureml-tutorial-tensorflow-v1.git
 ```
 
 - Start Jupyter in your conda environment. This will show the access url, such as ```http://localhost:8888/tree?token=xxxxxxxxxx```.
