@@ -27,7 +27,8 @@ In this tutorial, we'll setup our environment with Anaconda in Ubuntu virtual ma
 - Create "Data Science Virtual Machine (DSVM) on Ubuntu" resource in [Azure Portal](https://portal.azure.com/).<br>
   In DSVM, Conda (Anaconda) has already installed and configured, but you can also build your own environment from scratch. (DSVM also includes Azure ML CLI.)
 
-- Create conda virtual environment and activate (enter into) this environment as follows. (Here I named "myenv" as follows.)
+- Create conda virtual environment and activate (enter into) this environment as follows. (Here I named "myenv" as follows.)<br>
+TensorFlow 1.x needs Python version 3.6. (You cannot use Python 3.7 or later.)
 
 ```
 conda create -n myenv -y Python=3.6
