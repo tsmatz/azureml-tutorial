@@ -1,4 +1,4 @@
-# Azure Machine Learning Hands-On for TensorFlow 1.x
+# Azure Machine Learning Step-by-Step Tutorial (with TensorFlow 1.x)
 
 This sample shows generic flows of Azure Machine Learning (formerly, Azure Machine Learning service) using TensorFlow version 1.x along with the entire development lifecycle (exploration, train, tune, and publishing).
 
