@@ -67,21 +67,24 @@ pip install azureml-dataset-runtime
 conda install -y matplotlib tensorflow==1.15
 ```
 
-## 2. Create Azure ML Resource
+## 2. Create Azure ML Workspace
 
-Create new "Machine Learning" resource in [Azure Portal](https://portal.azure.com/) .    
-Please make sure that **you should specify location (region) which supports NC-seriese (K80 GPU) virtual machines in resource creation wizard** (such as "East US"), since we use NC6 virtual machine in Exercise 04. (When you create AML compute instances, the location of AML resource is used as VM location.)<br>
-See [here](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=virtual-machines) for NC-seriese supported regions.
+Create new "Machine Learning" resource in [Azure Portal](https://portal.azure.com/) .
 
-## 3. Start Jupyter Notebook
+> Note : It's not mandatory, but it's better to specify the location (region), in which you can run GPU virtual machine.
+> See [Exercise04](https://github.com/tsmatz/azureml-tutorial-tensorflow-v1/blob/master/notebooks/exercise04_train_remote.ipynb) for details. (Please request quota for GPU VM, if you don't have any GPU quotas.)
 
-- Clone this repo in your environment.
+## 3. Clone this repo
+
+Clone this repo in your working environment.
 
 ```
 git clone https://github.com/tsmatz/azureml-tutorial-tensorflow-v1.git
 ```
 
-- Start Jupyter in your conda environment. This will show the access url, such as ```http://localhost:8888/tree?token=xxxxxxxxxx```.
+## 4. Start Jupyter Notebook
+
+- Start Jupyter Notebook within your conda environment. This will show the access url, such as ```http://localhost:8888/tree?token=xxxxxxxxxx```.
 
 ```
 jupyter notebook
@@ -99,6 +102,6 @@ jupyter notebook
 <br />
 Now you're ready to start !
 
-See my post "[Azure Machine Learning Key Features for AI Engineers](https://tsmatz.wordpress.com/2018/11/20/azure-machine-learning-services/)" for key features about Azure Machine Learning.
+See my post "[Azure Machine Learning Key Features for AI Engineers](https://tsmatz.wordpress.com/2018/11/20/azure-machine-learning-services/)" for summarizing key features about Azure Machine Learning.
 
 *Tsuyoshi Matsuzaki @ Microsoft*
