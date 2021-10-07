@@ -79,7 +79,7 @@ Create new "Machine Learning" resource in [Azure Portal](https://portal.azure.co
 Clone this repo in your working environment.
 
 ```
-git clone https://github.com/tsmatz/azureml-tutorial-tensorflow-v1.git
+git clone https://github.com/tsmatz/azureml-tutorial-tensorflow-v1
 ```
 
 ## 4. Start Jupyter Notebook
