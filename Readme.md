@@ -12,6 +12,7 @@ By running [here](https://raw.githubusercontent.com/tensorflow/tensorflow/master
 - [Exercise06 : Experimentation Logs and Outputs](https://github.com/tsmatz/azureml-tutorial-tensorflow-v1/blob/master/notebooks/exercise06_experimentation.ipynb)
 - [Exercise07 : Hyperparameter Tuning](https://github.com/tsmatz/azureml-tutorial-tensorflow-v1/blob/master/notebooks/exercise07_tune_hyperparameter.ipynb)
 - [Exercise08 : Publish as a Web Service](https://github.com/tsmatz/azureml-tutorial-tensorflow-v1/blob/master/notebooks/exercise08_publish_model.ipynb)
+- [Exercise09 : ML Pipeline (MLOps Integration)](https://github.com/tsmatz/azureml-tutorial-tensorflow-v1/blob/master/notebooks/exercise09_ml_pipeline.ipynb)
 
 > Note : In this hands-on, we manually configure TensorFlow 1.x. You can also use built-in curated environments in Azure Machine Learning.
 
@@ -61,6 +62,9 @@ pip install azureml-train
 
 # Install AML dataset extension
 pip install azureml-dataset-runtime
+
+# Install AML pipeline extension
+pip install azureml-pipeline-core azureml-pipeline-steps
 
 # Install required packages for this tutorial
 # (use "tensorflow-gpu" if using GPU VM)
