@@ -21,7 +21,7 @@ There exist 2 options to run Azure Machine Learning (AML) API - Python SDK and C
 <ins>**CLI / YAML**</ins>
 
 - [Exercise00 : Set up Environment](./cli_yaml/exercise00_setup_cli.md)
-- [Exercise01 : Prepare Config Settings](./cli_yaml/exercise01_prepare_config.ipynb)
+- [Exercise01 : Prepare Config Settings](./cli_yaml/exercise01_login_azure.ipynb)
 - [Exercise02 : Prepare Data](./cli_yaml/exercise02_prepare_data.ipynb)
 - [Exercise03 : Just Train in Your Working Machine](./cli_yaml/exercise03_train_simple.ipynb)
 - [Exercise04 : Train on Remote GPU Virtual Machine](./cli_yaml/exercise04_train_remote.ipynb)
