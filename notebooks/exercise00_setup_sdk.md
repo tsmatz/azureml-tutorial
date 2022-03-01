@@ -1,4 +1,4 @@
-# Set Up for AML Python SDk
+# Set Up for AML Python SDK
 
 Before you start exercises, you must provision your working environment as follows.
 
