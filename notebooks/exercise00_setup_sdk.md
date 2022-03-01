@@ -68,7 +68,7 @@ Create new "Machine Learning" resource in [Azure Portal](https://portal.azure.co
 Clone this repo in your working environment.
 
 ```
-git clone https://github.com/tsmatz/azureml-tutorial-tensorflow-v1
+git clone https://github.com/tsmatz/azureml-tutorial
 ```
 
 ## 4. Start Jupyter Notebook
@@ -92,4 +92,4 @@ jupyter notebook
 Here we use hand-writing digit's dataset ([MNIST](http://yann.lecun.com/exdb/mnist/) dataset) - **train.tfrecords**, **test.tfrecords** - to train in this example.<br>
 Run [this script](https://raw.githubusercontent.com/tensorflow/tensorflow/master/tensorflow/examples/how_tos/reading_data/convert_to_records.py) and put these files into ```data``` folder.
 
-*back to [index](https://github.com/tsmatz/azureml-tutorial-tensorflow-v1/)*
+*back to [index](https://github.com/tsmatz/azureml-tutorial/)*

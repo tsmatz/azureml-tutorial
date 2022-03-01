@@ -1,7 +1,7 @@
-# Azure Machine Learning End-To-End Tutorials
+# Azure Machine Learning End-To-End Tutorial
 
 This example shows you generic AI / ML workflow through lifecycle - exploration, train, tune, and publishing - with Azure Machine Learning (AML) API.<br>
-(I assume that the framework **TensorFlow version 1.x** is used in our code.)
+(Here I assume **TensorFlow version 1.x** for AI / ML framework.)
 
 There exist 2 options to run Azure Machine Learning (AML) API - Python SDK and CLI/YAML.
 
