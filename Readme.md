@@ -65,7 +65,7 @@ sudo -H pip3 install --upgrade pip
 ```
 
 - In this tutorial, we run all exercises in IPython notebook.<br>
-  Install Jupyter notebook as follows.
+  Install Jupyter as follows.
 
 ```
 pip3 install jupyter
@@ -124,11 +124,11 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 az extension add --name ml --version 2.1.2
 ```
 
-> Note : "**Data Science Virtual Machine (DSVM) on Ubuntu**" in Microsoft Azure will also include the pre-configured Azure CLI and AML CLI.
+> Note : "**Data Science Virtual Machine (DSVM) on Ubuntu**" in Microsoft Azure will also include the pre-configured Azure CLI and AML CLI extension.
 
 ### 4. Clone this repo
 
-Clone this repo in your working environment.
+Clone this repository in your working environment.
 
 ```
 git clone https://github.com/tsmatz/azureml-tutorial
@@ -136,7 +136,8 @@ git clone https://github.com/tsmatz/azureml-tutorial
 
 ### 5. Start Jupyter Notebook
 
-- Start Jupyter Notebook within your conda environment as follows. This will show the access url in console, such as ```http://localhost:8888/tree?token=xxxxxxxxxx```.<br>
+- Start Jupyter Notebook within your conda environment as follows.<br>
+  This will show the access url in console, such as ```http://localhost:8888/tree?token=xxxxxxxxxx```.<br>
   (The default port is 8888.)
 
 ```
@@ -147,7 +148,7 @@ jupyter notebook
   For instance, the following is the SSH tunnel setting on "PuTTY" terminal client in Windows. (You can use ```ssh -L``` option in Mac OS.)<br>
   ![SSH Tunnel settings with putty](https://tsmatz.github.io/images/github/azure-ml-tensorflow-complete-sample/20191225_SSH_Tunnel.jpg)
 
-- Copy URL (```http://localhost:8888/?token=...```) for notebook in the console output (see above) and open this address with your web browser.
+- Copy the notebook URL (```http://localhost:8888/?token=...```) in the console output (see above) and open this address with your web browser.
 
 
 
