@@ -38,7 +38,7 @@ There exist 2 options to run Azure Machine Learning (AML) API - Python SDK and C
 Create new "Machine Learning" resource in [Azure Portal](https://portal.azure.com/) .
 
 > Note : We need GPU instance in Exercise04. Please specify the location (region) for machine learning resource, in which you can run GPU virtual machine.<br>
-> See [Exercise04](./exercise04_train_remote.ipynb) for details. (Please request quota for GPU AML VM, if you don't have any GPU quotas in your Azure subscription.)
+> See [Exercise04](./notebooks/exercise04_train_remote.ipynb) for details. (Please request quota for GPU AML VM, if you don't have any GPU quotas in your Azure subscription.)
 
 ### 2. Create Virtual Machine for running AML API
 
