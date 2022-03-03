@@ -136,7 +136,7 @@ git clone https://github.com/tsmatz/azureml-tutorial
 
 ### 5. Start Jupyter Notebook
 
-- Start Jupyter Notebook within your conda environment as follows.<br>
+- Start Jupyter notebook as follows.<br>
   This will show the access url in console, such as ```http://localhost:8888/tree?token=xxxxxxxxxx```.<br>
   (The default port is 8888.)
 
