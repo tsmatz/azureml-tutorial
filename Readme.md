@@ -43,9 +43,9 @@ Create new "Machine Learning" resource in [Azure Portal](https://portal.azure.co
 ### 2. Create Virtual Machine for running AML API
 
 In Exercise03, we use TensorFlow 1.x and you cannot then use Python 3.7 or later.<br>
-In order to use Python 3.6, here I use **Ubuntu 18.04 LTS in Microsoft Azure** for client, in which Python 3.6 is already installed.
+In order to use Python 3.6, here I use **Ubuntu Server 18.04 LTS in Microsoft Azure** for client, in which Python 3.6 is already installed.
 
-- Create Ubuntu 18.04 LTS virtual machine resource in [Azure Portal](https://portal.azure.com/).
+- Create Ubuntu Server 18.04 LTS virtual machine resource in [Azure Portal](https://portal.azure.com/).
 
 - Please make sure that Python 3.6 is installed on Ubuntu. (As I have mentioned above, you cannot use Python 3.7 or above to run TensorFlow 1.x.)
 
