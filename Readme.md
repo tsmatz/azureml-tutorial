@@ -77,7 +77,7 @@ pip3 install jupyter
 pip3 install matplotlib tensorflow==1.15
 ```
 
-For further settings, select the following option, depending on which API (Python SDK or CLI/YAML) you use.
+**Choose the following settings (3A or 3B), depending on which API (Python SDK or CLI/YAML) you use.**
 
 ### 3A [For Python SDK only] Set up SDK
 
