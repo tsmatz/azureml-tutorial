@@ -121,7 +121,7 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 - Install AML CLI extension as follows.
 
 ```
-az extension add --name ml --version 2.1.2
+az extension add --name ml --version 2.2.2
 ```
 
 > Note : "**Data Science Virtual Machine (DSVM) on Ubuntu**" in Microsoft Azure will also include the pre-configured Azure CLI and AML CLI extension.
