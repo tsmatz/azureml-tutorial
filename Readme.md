@@ -136,7 +136,7 @@ git clone https://github.com/tsmatz/azureml-tutorial
 
 ### 5. Start Jupyter Notebook
 
-- Start Jupyter notebook as follows.<br>
+- Start Jupyter notebook as follows. (Please re-login to take effect for "jupyter" path.)<br>
   This will show the access url in console, such as ```http://localhost:8888/tree?token=xxxxxxxxxx```.<br>
   (The default port is 8888.)
 
