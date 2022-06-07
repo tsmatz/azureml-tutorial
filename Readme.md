@@ -5,29 +5,29 @@ This example shows you generic AI / ML workflow through lifecycle - exploration,
 
 There exist 2 options to run Azure Machine Learning (AML) API - Python SDK and CLI/YAML.
 
-<ins>**Python SDK**</ins>
-
-- [Exercise01 : Prepare Config Settings](./notebooks/exercise01_prepare_config.ipynb)
-- [Exercise02 : Prepare Data](./notebooks/exercise02_prepare_data.ipynb)
-- [Exercise03 : Just Train in Your Working Machine](./notebooks/exercise03_train_simple.ipynb)
-- [Exercise04 : Train on Remote GPU Virtual Machine](./notebooks/exercise04_train_remote.ipynb)
-- [Exercise05 : Distributed Training](./notebooks/exercise05_train_distributed.ipynb)
-- [Exercise06 : Experimentation Logs and Outputs](./notebooks/exercise06_experimentation.ipynb)
-- [Exercise07 : Hyperparameter Tuning](./notebooks/exercise07_tune_hyperparameter.ipynb)
-- [Exercise08 : Publish as a Web Service](./notebooks/exercise08_publish_model.ipynb)
-- [Exercise09 : ML Pipeline (MLOps Integration)](./notebooks/exercise09_ml_pipeline.ipynb)
-
-<ins>**CLI / YAML**</ins>
+<ins>**CLI / YAML (v2)**</ins>
 
 - [Exercise01 : Login Azure](./cli_yaml/exercise01_login_azure.ipynb)
 - [Exercise02 : Prepare Data](./cli_yaml/exercise02_prepare_data.ipynb)
 - [Exercise03 : Just Train in Your Working Machine](./cli_yaml/exercise03_train_simple.ipynb)
 - [Exercise04 : Train on Remote GPU Virtual Machine](./cli_yaml/exercise04_train_remote.ipynb)
 - [Exercise05 : Distributed Training](./cli_yaml/exercise05_train_distributed.ipynb)
-- [Exercise06 : Experimentation Logs and Outputs](./cli_yaml/exercise06_experimentation.ipynb)
+- [Exercise06 : Track Logs and Metrics](./cli_yaml/exercise06_experimentation.ipynb)
 - [Exercise07 : Hyperparameter Tuning](./cli_yaml/exercise07_tune_hyperparameter.ipynb)
 - [Exercise08 : Publish as a Web Service](./cli_yaml/exercise08_publish_model.ipynb)
 - [Exercise09 : ML Pipeline (MLOps Integration)](./cli_yaml/exercise09_ml_pipeline.ipynb)
+
+<ins>**Python SDK v1**</ins>
+
+- [Exercise01 : Prepare Config Settings](./notebooks/exercise01_prepare_config.ipynb)
+- [Exercise02 : Prepare Data](./notebooks/exercise02_prepare_data.ipynb)
+- [Exercise03 : Just Train in Your Working Machine](./notebooks/exercise03_train_simple.ipynb)
+- [Exercise04 : Train on Remote GPU Virtual Machine](./notebooks/exercise04_train_remote.ipynb)
+- [Exercise05 : Distributed Training](./notebooks/exercise05_train_distributed.ipynb)
+- [Exercise06 : Track Logs and Metrics](./notebooks/exercise06_experimentation.ipynb)
+- [Exercise07 : Hyperparameter Tuning](./notebooks/exercise07_tune_hyperparameter.ipynb)
+- [Exercise08 : Publish as a Web Service](./notebooks/exercise08_publish_model.ipynb)
+- [Exercise09 : ML Pipeline (MLOps Integration)](./notebooks/exercise09_ml_pipeline.ipynb)
 
 > Note : You can also use raw REST API for involing AML API.
 
@@ -79,7 +79,29 @@ pip3 install matplotlib tensorflow==1.15
 
 **Choose the following settings (3A or 3B), depending on which API (Python SDK or CLI/YAML) you use.**
 
-### 3A [For Python SDK only] Set up SDK
+### 3A [CLI/YAML v2] Set up Azure ML CLI
+
+For running AML CLI/YAML, install Azure Machine Learning CLI extension version 2.0 or above as follows.
+
+- Install Azure CLI (version 2.15 or above) as follows. (See [here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-linux) for details.)
+
+```
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+```
+
+> Note : To see the installed Azure CLI version, run ```az --version```.
+
+- Install AML CLI extension as follows.
+
+```
+az extension add --name ml
+```
+
+> Note : In this example, I have used CLI version 2.4.1. When you install a specific version, please run ```az extension add --name ml --version 2.4.1```.
+
+### 3B [Python SDK v1] Set up Azure ML SDK v1
+
+For running AML Python SDK v1, install Python SDK version 1 and depending other packages as follows.
 
 Azure Machine Learning (AML) provides core package (```azureml-core```) and as well as extension packages. Depending on tasks, you should install addtional extensions. (For instance, if you want to run automated machine learning in AML, you should install automl extension package (```azureml-train-automl```) as well.)
 
@@ -105,26 +127,6 @@ pip3 install azureml-pipeline-core azureml-pipeline-steps
 
 > Note : AML widget's extension is installed as Jupyter notebook extension.<br>
 > Run ```jupyter nbextension list``` to see the installed Jupyter extensions.
-
-### 3B [For CLI/YAML only] Set up AML CLI extension
-
-For using AML CLI/YAML, install Azure Machine Learning CLI extension version 2.0 or above as follows.
-
-- Install Azure CLI version 2.15 or above as follows. (See [here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-linux) for details.)
-
-```
-curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-```
-
-> Note : To see the installed Azure CLI version, run ```az --version```.
-
-- Install AML CLI extension as follows.
-
-```
-az extension add --name ml --version 2.2.2
-```
-
-> Note : "**Data Science Virtual Machine (DSVM) on Ubuntu**" in Microsoft Azure will also include the pre-configured Azure CLI and AML CLI extension.
 
 ### 4. Clone this repo
 
