@@ -33,15 +33,15 @@ There exist 2 options to run Azure Machine Learning (AML) API - Python SDK and C
 
 > Note : When you are new to Azure Machine Learning, use v2 API.
 
-- [Exercise01 : Prepare Config Settings](./notebooks/exercise01_prepare_config.ipynb)
-- [Exercise02 : Prepare Data](./notebooks/exercise02_prepare_data.ipynb)
-- [Exercise03 : Just Train in Your Working Machine](./notebooks/exercise03_train_simple.ipynb)
-- [Exercise04 : Train on Remote GPU Virtual Machine](./notebooks/exercise04_train_remote.ipynb)
-- [Exercise05 : Distributed Training](./notebooks/exercise05_train_distributed.ipynb)
-- [Exercise06 : Track Logs and Metrics](./notebooks/exercise06_experimentation.ipynb)
-- [Exercise07 : Hyperparameter Tuning](./notebooks/exercise07_tune_hyperparameter.ipynb)
-- [Exercise08 : Publish as a Web Service](./notebooks/exercise08_publish_model.ipynb)
-- [Exercise09 : ML Pipeline (MLOps Integration)](./notebooks/exercise09_ml_pipeline.ipynb)
+- [Exercise01 : Prepare Config Settings](./python_sdk1/exercise01_prepare_config.ipynb)
+- [Exercise02 : Prepare Data](./python_sdk1/exercise02_prepare_data.ipynb)
+- [Exercise03 : Just Train in Your Working Machine](./python_sdk1/exercise03_train_simple.ipynb)
+- [Exercise04 : Train on Remote GPU Virtual Machine](./python_sdk1/exercise04_train_remote.ipynb)
+- [Exercise05 : Distributed Training](./python_sdk1/exercise05_train_distributed.ipynb)
+- [Exercise06 : Track Logs and Metrics](./python_sdk1/exercise06_experimentation.ipynb)
+- [Exercise07 : Hyperparameter Tuning](./python_sdk1/exercise07_tune_hyperparameter.ipynb)
+- [Exercise08 : Publish as a Web Service](./python_sdk1/exercise08_publish_model.ipynb)
+- [Exercise09 : ML Pipeline (MLOps Integration)](./python_sdk1/exercise09_ml_pipeline.ipynb)
 
 You can also use raw REST API for involing AML API.
 
@@ -52,7 +52,7 @@ You can also use raw REST API for involing AML API.
 Create new "Machine Learning" resource in [Azure Portal](https://portal.azure.com/) .
 
 > Note : We need GPU instance in Exercise04. Please specify the location (region) for machine learning resource, in which you can run GPU virtual machine.<br>
-> See [Exercise04](./notebooks/exercise04_train_remote.ipynb) for details. (Please request quota for GPU AML VM, if you don't have any GPU quotas in your Azure subscription.)
+> See [Exercise04](./cli_yaml/exercise04_train_remote.ipynb) for details. (Please request quota for GPU AML VM, if you don't have any GPU quotas in your Azure subscription.)
 
 ### 2. Create Virtual Machine for running AML API
 
