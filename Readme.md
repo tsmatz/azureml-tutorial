@@ -17,7 +17,21 @@ There exist 2 options to run Azure Machine Learning (AML) API - Python SDK and C
 - [Exercise08 : Publish as a Web Service](./cli_yaml/exercise08_publish_model.ipynb)
 - [Exercise09 : ML Pipeline (MLOps Integration)](./cli_yaml/exercise09_ml_pipeline.ipynb)
 
-<ins>**Python SDK v1**</ins>
+<ins>**Python SDK (v2)**</ins>
+
+- [Exercise01 : Initialize Client](./python_sdk2/exercise01_initialize_client.ipynb)
+- [Exercise02 : Prepare Data](./python_sdk2/exercise02_prepare_data.ipynb)
+- [Exercise03 : Just Train in Your Working Machine](./python_sdk2/exercise03_train_simple.ipynb)
+- [Exercise04 : Train on Remote GPU Virtual Machine](./python_sdk2/exercise04_train_remote.ipynb)
+- [Exercise05 : Distributed Training](./python_sdk2/exercise05_train_distributed.ipynb)
+- [Exercise06 : Track Logs and Metrics](./python_sdk2/exercise06_experimentation.ipynb)
+- [Exercise07 : Hyperparameter Tuning](./python_sdk2/exercise07_tune_hyperparameter.ipynb)
+- [Exercise08 : Publish as a Web Service](./python_sdk2/exercise08_publish_model.ipynb)
+- [Exercise09 : ML Pipeline (MLOps Integration)](./python_sdk2/exercise09_ml_pipeline.ipynb)
+
+<ins>**Python SDK (v1)**</ins>
+
+> Note : When you are new to Azure Machine Learning, use v2 API.
 
 - [Exercise01 : Prepare Config Settings](./notebooks/exercise01_prepare_config.ipynb)
 - [Exercise02 : Prepare Data](./notebooks/exercise02_prepare_data.ipynb)
@@ -77,7 +91,7 @@ pip3 install jupyter
 pip3 install matplotlib tensorflow==1.15
 ```
 
-**Choose the following settings (3A or 3B), depending on which API (Python SDK or CLI/YAML) you use.**
+**Choose the following settings (3A, 3B, or 3C), depending on which API (Python SDK or CLI/YAML) you use.**
 
 ### 3A [CLI/YAML v2] Set up Azure ML CLI
 
@@ -99,7 +113,17 @@ az extension add --name ml
 
 > Note : In this example, I have used CLI version 2.4.1. When you install a specific version, please run ```az extension add --name ml --version 2.4.1```.
 
-### 3B [Python SDK v1] Set up Azure ML SDK v1
+### 3B [Python SDK v2] Set up Azure ML SDK v2
+
+For running AML Python SDK v2, install Python SDK version 2 as follows.
+
+```
+pip3 install --pre azure-ai-ml==0.1.0b3
+```
+
+> Note : These examples use AML Python SDK v2 early beta. Please specify SDK version, because these might be changed in the future.
+
+### 3C [Python SDK v1] Set up Azure ML SDK v1
 
 For running AML Python SDK v1, install Python SDK version 1 and depending other packages as follows.
 
