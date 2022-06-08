@@ -43,7 +43,7 @@ There exist 2 options to run Azure Machine Learning (AML) API - Python SDK and C
 - [Exercise08 : Publish as a Web Service](./notebooks/exercise08_publish_model.ipynb)
 - [Exercise09 : ML Pipeline (MLOps Integration)](./notebooks/exercise09_ml_pipeline.ipynb)
 
-> Note : You can also use raw REST API for involing AML API.
+You can also use raw REST API for involing AML API.
 
 ## How to Set up
 
