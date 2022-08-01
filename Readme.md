@@ -108,10 +108,8 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 - Install AML CLI extension as follows.
 
 ```
-az extension add --name ml
+az extension add --name ml --version 2.4.1
 ```
-
-> Note : In this example, I have used CLI version 2.4.1. When you install a specific version, please run ```az extension add --name ml --version 2.4.1```.
 
 ### 3B [Python SDK v2] Set up Azure ML SDK v2
 
