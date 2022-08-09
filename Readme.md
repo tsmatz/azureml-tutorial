@@ -176,6 +176,6 @@ jupyter notebook
 
 
 
-See my post "[Azure Machine Learning Introduction and Key Features](https://tsmatz.wordpress.com/2018/11/20/azure-machine-learning-services/)" for feature's overview in Azure Machine Learning.
+See my post "[Azure Machine Learning Walkthrough and Key Features](https://tsmatz.wordpress.com/2018/11/20/azure-machine-learning-services/)" for feature's overview in Azure Machine Learning.
 
 *Tsuyoshi Matsuzaki @ Microsoft*
