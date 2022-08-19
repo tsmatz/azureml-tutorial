@@ -91,7 +91,7 @@ pip3 install jupyter
 pip3 install matplotlib tensorflow==1.15
 ```
 
-**Choose the following settings (3A, 3B, or 3C), depending on which API (Python SDK or CLI/YAML) you use.**
+### Choose the following settings (3A, 3B, or 3C), depending on which API (CLI/YAML or Python SDK) you use.
 
 ### 3A. Set up Azure ML CLI v2
 
