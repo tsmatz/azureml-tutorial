@@ -1,7 +1,6 @@
 # Azure Machine Learning Tutorial (CLI / Python)
 
-This example shows you generic AI / ML workflow through lifecycle - exploration, train, tune, and publishing - with Azure Machine Learning (AML) API.<br>
-(Here I assume **TensorFlow version 1.x** for AI / ML framework.)
+This example shows you generic AI / ML workflow through lifecycle - exploration, train, tune, and publishing - with Azure Machine Learning (AML) API.
 
 There exist 2 options to run Azure Machine Learning (AML) API - CLI/YAML and Python SDK.
 
@@ -56,18 +55,18 @@ Create new "Machine Learning" resource in [Azure Portal](https://portal.azure.co
 
 ### 2. Create Virtual Machine for running AML API
 
-In Exercise03, we use TensorFlow 1.x and you cannot then use Python 3.7 or later.<br>
-In order to use Python 3.6, here I use **Ubuntu Server 18.04 LTS in Microsoft Azure** for client, in which Python 3.6 is already installed.
+We run code with TensorFlow in Exercise03.<br>
+Here I use **Ubuntu Server 20.04 LTS in Microsoft Azure** for client, in which Python 3.8 is already installed.
 
-- Create Ubuntu Server 18.04 LTS virtual machine resource in [Azure Portal](https://portal.azure.com/).
+- Create Ubuntu Server 10.04 LTS virtual machine resource in [Azure Portal](https://portal.azure.com/).
 
-- Please make sure that Python 3.6 is installed on Ubuntu. (As I have mentioned above, you cannot use Python 3.7 or above to run TensorFlow 1.x.)
+- Please make sure that Python 3.8 is installed on Ubuntu.
 
 ```
 # Check version
 python3 -V
-### # Set python3.6 as default python command (Here I assume /usr/bin/python3.6)
-### sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.6 1
+### # Set python3.8 as default python command (Here I assume /usr/bin/python3.8)
+### sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.8 1
 ````
 
 - Install and upgrade pip3 as follows.
@@ -88,7 +87,7 @@ pip3 install jupyter
 - Install the required packages for Exercise03. (Use "tensorflow-gpu" instead, when using GPU VM.)
 
 ```
-pip3 install matplotlib tensorflow==1.15
+pip3 install matplotlib tensorflow==2.10.0
 ```
 
 ### Choose the following settings (3A, 3B, or 3C), depending on which API (CLI/YAML or Python SDK) you use.
@@ -108,7 +107,7 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 - Install AML CLI extension as follows.
 
 ```
-az extension add --name ml --version 2.4.1
+az extension add --name ml --version 2.8.0
 ```
 
 ### 3B. Set up Azure ML Python SDK v2
@@ -116,7 +115,7 @@ az extension add --name ml --version 2.4.1
 For running AML Python SDK v2, install Python SDK version 2 as follows.
 
 ```
-pip3 install --pre azure-ai-ml==0.1.0b3
+pip3 install azure-ai-ml==0.1.0b7 azure-identity==1.11.0
 ```
 
 > Note : These examples use AML Python SDK v2 early beta. Please specify SDK version, because these might be changed in the future.
