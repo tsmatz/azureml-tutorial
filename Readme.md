@@ -90,6 +90,8 @@ pip3 install jupyter
 pip3 install matplotlib tensorflow==2.10.0
 ```
 
+> Note : When you use Azure Machine Learning compute instance, install packages in terminal.
+
 ### Choose the following settings (3A, 3B, or 3C), depending on which API (CLI/YAML or Python SDK) you use.
 
 ### 3A. Set up Azure ML CLI v2
