@@ -51,14 +51,14 @@ You can also use raw REST API for invoking AML API.
 Create new "Machine Learning" resource in [Azure Portal](https://portal.azure.com/) .
 
 > Note : We need GPU instance in Exercise04. Please specify the location (region) for machine learning resource, in which you can run GPU virtual machine.<br>
-> See [Exercise04](./cli_yaml/exercise04_train_remote.ipynb) for details. (Please request quota for GPU AML VM, if you don't have any GPU quotas in your Azure subscription.)
+> See [Exercise04](./cli_yaml/exercise04_train_remote.ipynb) for details.
 
 ### 2. Create Virtual Machine for running AML API
 
 We run code with TensorFlow in Exercise03.<br>
 Here I use **Ubuntu Server 20.04 LTS in Microsoft Azure** for client, in which Python 3.8 is already installed.
 
-- Create Ubuntu Server 10.04 LTS virtual machine resource in [Azure Portal](https://portal.azure.com/).
+- Create Ubuntu Server 20.04 LTS virtual machine resource in [Azure Portal](https://portal.azure.com/).
 
 - Please make sure that Python 3.8 is installed on Ubuntu.
 
