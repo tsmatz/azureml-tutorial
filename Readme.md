@@ -50,7 +50,7 @@ You can also use raw REST API for invoking AML API.
 
 Create new "Machine Learning" resource in [Azure Portal](https://portal.azure.com/) .
 
-> Note : We need GPU instance in Exercise04. Please specify the location (region) for machine learning resource, in which you can run GPU virtual machine.<br>
+> Note : When you use GPU instance in Exercise04, please specify the location (region) for machine learning resource, in which you can run GPU virtual machine.<br>
 > See [Exercise04](./cli_yaml/exercise04_train_remote.ipynb) for details.
 
 ### 2. Create Virtual Machine for running AML API
