@@ -94,7 +94,7 @@ pip3 install matplotlib tensorflow==2.10.0
 
 ### Choose the following settings (3A, 3B, or 3C), depending on which API (CLI/YAML or Python SDK) you use.
 
-### 3A. Set up Azure ML CLI v2
+### 3A. Set up for Azure ML CLI v2
 
 For running AML CLI/YAML, install Azure Machine Learning CLI extension version 2.0 or above as follows.
 
@@ -109,20 +109,18 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 - Install AML CLI extension as follows.
 
 ```
-az extension add --name ml --version 2.8.0
+az extension add --name ml --version 2.12.1
 ```
 
-### 3B. Set up Azure ML Python SDK v2
+### 3B. Set up for Azure ML Python SDK v2
 
 For running AML Python SDK v2, install Python SDK version 2 as follows.
 
 ```
-pip3 install azure-ai-ml==0.1.0b7 azure-identity==1.11.0
+pip3 install azure-ai-ml==1.2.0 azure-identity==1.12.0
 ```
 
-> Note : These examples use AML Python SDK v2 early beta. Please specify SDK version, because these might be changed in the future.
-
-### 3C. Set up Azure ML Python SDK v1
+### 3C. Set up for Azure ML Python SDK v1
 
 For running AML Python SDK v1, install Python SDK version 1 and depending other packages as follows.
 
